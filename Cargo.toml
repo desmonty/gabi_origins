@@ -1,0 +1,6 @@
+[package]
+name = "gabi_origin"
+version = "0.1.0"
+authors = ["charles <charles.desmonty@orange.fr>"]
+
+[dependencies]
