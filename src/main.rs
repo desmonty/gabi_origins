@@ -33,9 +33,12 @@ fn approximate_fraction(p: u64, q: u64, exponent: u64) -> (u64, u64) {
 }
 
 fn main() {
-    for i in 1..63 {
-        let approx = approximate_fraction(1, 6, i);
-        println!("{:?} ::: {:?}", approx.0 as f64 / approx.1 as f64, approx);
+    let num = 6;
+
+    for i in 2..62 {
+        let before_approx = approximate_fraction(1, num, i-1);
+        let approx = approximate_fraction(1, num, i);
+        println!("{:?} ::: {:?} ::: {:?}", (approx.0) as i64 - 2*(before_approx.0) as i64, approx.0 as f64 / approx.1 as f64, approx);
     }
 }
 
